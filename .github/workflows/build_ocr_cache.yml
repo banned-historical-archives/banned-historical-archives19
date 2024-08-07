@@ -60,7 +60,7 @@ jobs:
         run: |
           cd ./ocr_cache
           git add .
-          git commit -m automation && git push
+          git commit -m automation && git pull && git push
       - name: Invoke workflow
         uses: benc-uk/workflow-dispatch@v1
         with:
