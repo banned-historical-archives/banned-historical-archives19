@@ -1,6 +1,14 @@
 name: build_ocr_cache
 on:
+  schedule:
+    - cron: '0 */1 * * *' # every hour
   workflow_dispatch:
+    inputs:
+      date:
+        description: 'Date to run the workflow'
+        required: true
+        type: string
+        default: 'in 1 hour'
   push:
     branches: ['config']
 
@@ -10,6 +18,10 @@ permissions:
   id-token: write
   actions: write
 
+concurrency:
+  group: schedule${{ github.event.inputs.date }}
+  cancel-in-progress: true
+  
 jobs:
   container-job:
     runs-on: ubuntu-latest
