@@ -1,7 +1,5 @@
 name: build_ocr_cache
 on:
-  schedule:
-    - cron: '*/15 * * * *' # every hour
   workflow_dispatch:
   push:
     branches: ['config']
