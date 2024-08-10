@@ -19,7 +19,11 @@ export default {
         "page_end": 498,
         "dates": []
       }
-    ]
+    ],"ocr": {
+      "use_onnx": true,
+      "det_model_dir": "./paddle/onnx/ch_PP-OCRv4_det_infer.onnx",
+      "rec_model_dir": "./paddle/onnx/ch_PP-OCRv4_rec_infer.onnx"
+    }
   },
   "parser_id": "automation",
   "path": "abe4cadc-3ea8-4284-b13a-a061ca44a794.pdf",

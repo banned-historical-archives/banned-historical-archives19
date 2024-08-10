@@ -23,7 +23,11 @@ export default {
           }
         ]
       }
-    ]
+    ],"ocr": {
+      "use_onnx": true,
+      "det_model_dir": "./paddle/onnx/ch_PP-OCRv4_det_infer.onnx",
+      "rec_model_dir": "./paddle/onnx/ch_PP-OCRv4_rec_infer.onnx"
+    }
   },
   "parser_id": "automation",
   "path": "66d34f77-67bd-477a-bfb2-ccd8f470e4f9.pdf",
