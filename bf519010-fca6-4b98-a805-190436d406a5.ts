@@ -1,32 +1,35 @@
 export default {
-  "entity": {
-    "id": "bf519010-fca6-4b98-a805-190436d406a5",
-    "name": "生逢其时——我亲历的无产阶级文化大革命",
-    "internal": false,
-    "type": "pdf",
-    "official": false,
-    "author": "顾建棠",
-    "files": "https://raw.githubusercontent.com/banned-historical-archives/banned-historical-archives19/main/bf519010-fca6-4b98-a805-190436d406a5.pdf"
+  entity: {
+    id: 'bf519010-fca6-4b98-a805-190436d406a5',
+    name: '生逢其时——我亲历的无产阶级文化大革命',
+    internal: false,
+    type: 'pdf',
+    official: false,
+    author: '顾建棠',
+    files: [
+      'https://raw.githubusercontent.com/banned-historical-archives/banned-historical-archives19/main/bf519010-fca6-4b98-a805-190436d406a5.pdf',
+    ],
   },
-  "parser_option": {
-    "articles": [
+  parser_option: {
+    articles: [
       {
-        "title": "生逢其时——我亲历的无产阶级文化大革命",
-        "authors": [
-          "顾建棠"
+        title: '生逢其时——我亲历的无产阶级文化大革命',
+        authors: [
+          '顾建棠',
         ],
-        "page_start": 1,
-        "page_end": 502,
-        "dates": []
-      }
-    ],"ocr": {
-      "use_onnx": true,
-      "det_model_dir": "./paddle/onnx/ch_PP-OCRv4_det_infer.onnx",
-      "rec_model_dir": "./paddle/onnx/ch_PP-OCRv4_rec_infer.onnx"
-    }
+        page_start: 1,
+        page_end: 502,
+        dates: [],
+      },
+    ],
+    ocr: {
+      use_onnx: true,
+      det_model_dir: './paddle/onnx/ch_PP-OCRv4_det_infer.onnx',
+      rec_model_dir: './paddle/onnx/ch_PP-OCRv4_rec_infer.onnx',
+    },
   },
-  "parser_id": "automation",
-  "path": "bf519010-fca6-4b98-a805-190436d406a5.pdf",
-  "resource_type": "book",
-  "version": 2
-}
+  parser_id: 'automation',
+  path: 'bf519010-fca6-4b98-a805-190436d406a5.pdf',
+  resource_type: 'book',
+  version: 2,
+};

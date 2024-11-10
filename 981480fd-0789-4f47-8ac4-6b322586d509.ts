@@ -1,32 +1,35 @@
 export default {
-  "entity": {
-    "id": "981480fd-0789-4f47-8ac4-6b322586d509",
-    "name": "《人民文革论》（人民文革丛书卷四）",
-    "internal": false,
-    "type": "pdf",
-    "official": false,
-    "author": "宋永毅",
-    "files": "https://raw.githubusercontent.com/banned-historical-archives/banned-historical-archives19/main/981480fd-0789-4f47-8ac4-6b322586d509.pdf"
+  entity: {
+    id: '981480fd-0789-4f47-8ac4-6b322586d509',
+    name: '《人民文革论》（人民文革丛书卷四）',
+    internal: false,
+    type: 'pdf',
+    official: false,
+    author: '宋永毅',
+    files: [
+      'https://raw.githubusercontent.com/banned-historical-archives/banned-historical-archives19/main/981480fd-0789-4f47-8ac4-6b322586d509.pdf',
+    ],
   },
-  "parser_option": {
-    "articles": [
+  parser_option: {
+    articles: [
       {
-        "title": "《人民文革论》（人民文革丛书卷四）",
-        "authors": [
-          "宋永毅"
+        title: '《人民文革论》（人民文革丛书卷四）',
+        authors: [
+          '宋永毅',
         ],
-        "page_start": 1,
-        "page_end": 112,
-        "dates": []
-      }
-    ],"ocr": {
-      "use_onnx": true,
-      "det_model_dir": "./paddle/onnx/ch_PP-OCRv4_det_infer.onnx",
-      "rec_model_dir": "./paddle/onnx/ch_PP-OCRv4_rec_infer.onnx"
-    }
+        page_start: 1,
+        page_end: 112,
+        dates: [],
+      },
+    ],
+    ocr: {
+      use_onnx: true,
+      det_model_dir: './paddle/onnx/ch_PP-OCRv4_det_infer.onnx',
+      rec_model_dir: './paddle/onnx/ch_PP-OCRv4_rec_infer.onnx',
+    },
   },
-  "parser_id": "automation",
-  "path": "981480fd-0789-4f47-8ac4-6b322586d509.pdf",
-  "resource_type": "book",
-  "version": 2
-}
+  parser_id: 'automation',
+  path: '981480fd-0789-4f47-8ac4-6b322586d509.pdf',
+  resource_type: 'book',
+  version: 2,
+};
