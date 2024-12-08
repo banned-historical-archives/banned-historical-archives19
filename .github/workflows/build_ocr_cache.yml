@@ -10,15 +10,14 @@ permissions:
   id-token: write
   actions: write
 
-concurrency:
-  group: schedule
-  cancel-in-progress: false
-  
 jobs:
   container-job:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/banned-historical-archives/ocr:main
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
     steps:
       - uses: actions/checkout@v4
         with:
@@ -64,7 +63,7 @@ jobs:
         run: |
           cd ./ocr_cache
           git add .
-          git commit -m automation && git pull && git push
+          git commit -m automation && git push
       - name: Invoke workflow
         uses: benc-uk/workflow-dispatch@v1
         with:
